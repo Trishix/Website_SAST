@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Rocket, UserPlus, Mail, Lock } from "lucide-react";
 import { showToast } from "../main.jsx";
 import { BASE_URL } from "../api";
+import Footer from "../components/footer.jsx";
 
 export default function Register() {
   const [method, setMethod] = useState("email");
@@ -413,6 +414,11 @@ export default function Register() {
           border-radius: 50%;
           animation: spin 1s linear infinite;
         }
+
+      .footer-important {
+        background-color: black !important;
+        opacity: 1 !important;
+        }
       `}</style>
 
       <Navbar />
@@ -819,6 +825,7 @@ export default function Register() {
           </div>
         </div>
       </div>
+      <Footer className="footer-important" />
     </>
   );
 }
